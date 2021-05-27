@@ -1,0 +1,20 @@
+<html>
+
+{% for post in post %}
+<B> Posts</B><p>
+Title: {{post.title}} <BR>
+Topic: {{post.topic}}<BR>
+Message: {{post.message}} <BR>
+Created : {{post.created}} <p>
+{% for interaction in interaction %}
+{% if interaction.id == post.id %}
+<B> Interactions<B><p>
+Created: {{interaction.name}}<BR>
+Interaction: {{interaction.name}} <BR>
+Comment: {{interaction.comment}}<p>
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+
+</html>
